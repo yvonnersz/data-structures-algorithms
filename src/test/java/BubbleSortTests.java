@@ -45,4 +45,24 @@ public class BubbleSortTests {
 
         assertArrayEquals(expected, numbersArr, "Returns sorted array when two integers are passed");
     }
+
+    @Test
+    void bubbleSort_threeIntegerArrayParams_returnsSortedArray() {
+        int[] numbersArr = new int[] {9, 2, 1};
+
+        int[] expected = new int[] {1, 2, 9};
+        numbers.bubbleSort(numbersArr);
+
+        assertArrayEquals(expected, numbersArr, "Returns sorted array when three integers are passed");
+    }
+
+    @Test
+    void bubbleSort_multipleIntegerArrayParams_returnsSortedArray() {
+        int[] numbersArr = new int[] {9, 2, 1, 0, -4, 10};
+
+        int[] expected = new int[] {-4, 0, 1, 2, 9, 10};
+        numbers.bubbleSort(numbersArr);
+
+        assertArrayEquals(expected, numbersArr, "Returns sorted array when multiple integers are passed");
+    }
 }
