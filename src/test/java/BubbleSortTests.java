@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BubbleSortTests {
     private BubbleSort numbers;
@@ -18,5 +18,13 @@ public class BubbleSortTests {
         } catch (Exception e) {
             fail("BubbleSort class should exist");
         }
+    }
+
+    @Test
+    void bubbleSort_emptyParams_returnsEmptyArray() {
+        int[] numbersArr = new int[]{};
+        numbers.bubbleSort(numbersArr);
+
+        assertArrayEquals(new int[]{}, numbersArr, "Returns empty array if empty array is passed");
     }
 }
