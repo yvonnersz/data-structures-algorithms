@@ -27,4 +27,12 @@ public class BubbleSortTests {
 
         assertArrayEquals(new int[]{}, numbersArr, "Returns empty array if empty array is passed");
     }
+
+    @Test
+    void bubbleSort_oneIntegerArrayParams_returnsPassedInteger() {
+        int[] numbersArr = new int[]{3};
+        numbers.bubbleSort(numbersArr);
+
+        assertArrayEquals(new int[]{3}, numbersArr, "Returns single integer array when one integer is passed");
+    }
 }
